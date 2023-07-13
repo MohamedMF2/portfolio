@@ -1,7 +1,7 @@
 /*CSS Reset*/
-
+@charset "UTF-8";
 :root {
-  --container-width: 119rem;
+  --container-width: 80rem;
   --gutter: 2rem;
   --color-black: #000;
   --color-white: #fff;
@@ -38,8 +38,6 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
-  font: initial;
 }
 
 *,
@@ -57,6 +55,7 @@ button {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  border: 0;
 }
 
 ul,
@@ -64,3 +63,98 @@ ol {
   list-style: none;
 }
 /*End of CSS Reset*/
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: var(--font-family-raleway);
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+.container {
+  margin: 0px auto;
+  max-width: var(--container-width);
+}
+
+.header {
+  position: relative;
+  padding: 3rem 0;
+  display: flex;
+  justify-content: center;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  /* background-color: red; */
+  height: 100%;
+  width: 100vw;
+  border-bottom: 0.1rem solid var(--color-input-border);
+  top: 0;
+  z-index: -1;
+}
+
+.navigation_list {
+  display: flex;
+  gap: 2rem;
+}
+
+.navigation_link:link,
+.navigation_link:visited {
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+}
+
+.navigation_link:hover,
+.navigation_link:active {
+  text-decoration: underline;
+  color: var(--color-text);
+}
+
+/*toggle*/
+.toggle {
+  display: flex;
+  gap: 1rem;
+  margin-left: auto;
+}
+
+.toggle__title {
+  font-size: var(--font-size-18);
+  font-weight: var(--font-weight-medium);
+}
+.toggle__checkbox {
+  display: none;
+}
+.toggle__label {
+  display: block;
+  position: relative;
+  background-color: var(--color-black);
+  width: 4.5rem;
+  height: 2.2rem;
+  cursor: pointer;
+  border-radius: 1.5rem;
+  padding: 0.3rem 0.4rem;
+  transition: 0.3s;
+}
+.toggle__label::after {
+  content: "";
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  display: block;
+  background-color: var(--color-white);
+  transition: 0.3s;
+}
+
+.toggle__checkbox:checked + .toggle__label {
+  background-color: var(--color-white);
+}
+
+.toggle__checkbox:checked + .toggle__label::after {
+  transform: translateX(2.1rem);
+  background-color: var(--color-green);
+}
+
+/*end toggle*/
