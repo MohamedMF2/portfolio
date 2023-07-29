@@ -75,8 +75,11 @@ body {
 }
 
 .container {
-  margin: 0px auto;
-  max-width: var(--container-width);
+  display: grid;
+  row-gap: 11rem;
+  margin: 0 auto;
+  max-width: clac (var(--container-width) + calc(var(--gutter) * 2));
+  padding-inline: var(--gutter);
 }
 
 .header {
@@ -158,3 +161,105 @@ body {
 }
 
 /*end toggle*/
+
+.section {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  align-items: start;
+}
+
+/*Bio Component*/
+.bio {
+  column-gap: 7.4rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.bio__heading {
+  font-size: var(--font-size-70);
+  font-weight: var(--font-weight-bold);
+}
+
+.bio__objective {
+  font-family: var(--font-family-poppins);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-20);
+  margin: 3rem 0 8rem;
+}
+.bio__name {
+  font-weight: var(--font-weight-semi-bold);
+}
+.bio_almdrasa {
+  color: var(--color-green);
+}
+.bio_facebook {
+  color: var(--color-blue);
+}
+.bio__twitter {
+  color: var(--color-light-blue);
+}
+.bio__linkedin {
+  color: var(--color-dark-blue);
+}
+.bio__youtube {
+  color: var(--color-red);
+}
+
+.bio__links {
+  font-size: 2.4rem;
+  font-weight: var(--font-weight-semi-bold);
+  text-decoration: none;
+}
+
+.say-hi-link {
+  background-color: var(--color-link-bg);
+  color: var(--color-white);
+  padding: 0.7rem 4.7rem;
+}
+.find-out-link {
+  pad: 0.7rem 0;
+  margin-inline-start: 1.4rem;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0.5rem);
+  }
+  35% {
+    transform: translateY(-0.5rem);
+  }
+  70% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.bio__arrow {
+  display: inline-block;
+  animation: jump 1s infinite alternate ease-in-out;
+}
+
+.bio__pic-content {
+  display: flex;
+  position: relative;
+  align-items: flex-end;
+  justify-self: end;
+}
+
+.bio__pic-content::before {
+  content: "";
+  position: absolute;
+  background-color: var(--color-box-img);
+  width: 100%;
+  height: 46rem;
+  z-index: -1;
+  border-radius: 1.8rem;
+  box-shadow: 2.17543px 8.7017px 368.0699px rgba(0, 0, 0, 0.15);
+}
+
+.bio__pic {
+  width: 42.7rem;
+}
+
+/*End Bio*/
