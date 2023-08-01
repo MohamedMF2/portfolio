@@ -14,6 +14,9 @@
   </head>
   <body>
     <div class="container">
+      <video  class="video-loop" autoplay loop>
+        <source src="./matrix.mp4" type="video/mp4">
+      </video>
       <header class="header">
         <nav class="navigation">
           <ul class="navigation_list">
@@ -68,6 +71,7 @@
           />
         </div>
       </section>
+
       <section id="skills" class="skills section section--with-bg">
         <h2 class="h2-heading">Skills</h2>
         <ul class="skills__list">
@@ -78,27 +82,22 @@
           <li class="skills__item">
             <h2 class="skills__title">CSS</h2>
             <span class="skills__years">8 years</span>
-
           </li>
           <li class="skills__item">
             <h2 class="skills__title">Javascript</h2>
             <span class="skills__years">8 years</span>
-
           </li>
           <li class="skills__item">
             <h2 class="skills__title">React</h2>
             <span class="skills__years">4 years</span>
-
           </li>
           <li class="skills__item">
             <h2 class="skills__title">Redux</h2>
             <span class="skills__years">3 years</span>
-
           </li>
           <li class="skills__item">
             <h2 class="skills__title">React Testing library</h2>
             <span class="skills__years">1 years</span>
-
           </li>
         </ul>
         <!-- <div class="skills__list">
@@ -127,6 +126,13 @@
             <p>1 years</p>
           </div>
         </div> -->
+      </section>
+
+      <section id="media" class="media section">
+        <video class="media__video" poster="./images/thumbnail.jpg" controls>
+          <source src="./video.mp4" type="video/mp4" />
+          Your browser doesn't support the video tag
+        </video>
       </section>
     </div>
   </body>

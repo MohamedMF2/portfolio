@@ -109,6 +109,15 @@ body {
   max-width: clac (var(--container-width) + calc(var(--gutter) * 2));
   padding-inline: var(--gutter);
 }
+.video-loop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  opacity: 0.125;
+}
 .header {
   position: relative;
   padding: 3rem 0;
@@ -316,3 +325,15 @@ body {
 }
 
 /*End skills*/
+
+/*media*/
+.media {
+  align-items: center;
+  justify-content: center;
+}
+
+.media__video {
+  max-width: 100%;
+}
+
+/*End media*/
