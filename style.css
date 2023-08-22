@@ -66,10 +66,13 @@ ol {
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 11rem;
 }
 /* Global styles*/
 
-body,[type="submit"] {
+body,
+[type="submit"] {
   font-size: 1.6rem;
   font-family: var(--font-family-raleway);
   background-color: var(--color-background);
@@ -131,7 +134,7 @@ body,[type="submit"] {
 .header::before {
   content: "";
   position: absolute;
-  /* background-color: red; */
+  /* background-color : red; */
   height: 100%;
   width: 100vw;
   border-bottom: 0.1rem solid var(--color-input-border);
@@ -145,6 +148,16 @@ body,[type="submit"] {
   gap: 2rem;
 }
 
+.container:has(#bio:target) .navigation_bio,
+.container:has(#skills:target) .navigation_skills,
+.container:has(#media:target) .navigation_media,
+.container:has(#projects:target) .navigation_projects,
+.container:has(#clients:target) .navigation_clients,
+.container:has(#contact:target) .navigation_contact {
+  color: var(--color-blue);
+  text-decoration: underline;
+  font-weight: var(--font-weight-bold);
+}
 .navigation_link:link,
 .navigation_link:visited {
   text-decoration: none;
@@ -431,24 +444,23 @@ body,[type="submit"] {
 .contact__social:hover {
   transform: scale(1.2);
 }
-.contact__inputs{
+.contact__inputs {
   display: flex;
   gap: 3rem;
 }
-.contact__input{
+.contact__input {
   flex: 1;
   border: 0;
   outline: 0;
   background-color: transparent;
   border-bottom: 0.1rem solid var(--color-input-border);
-  
 }
-.contact__textarea{
+.contact__textarea {
   width: 100%;
   margin: 4rem 0;
 }
 
-.contact__button{
+.contact__button {
   background-color: var(--color-link-bg);
   color: var(--color-white);
   padding: 1.7rem 1.8rem;
@@ -456,17 +468,16 @@ body,[type="submit"] {
   font-weight: var(--font-weight-medium);
 }
 
-form:invalid::after{
-  content:"*";
+form:invalid::after {
+  content: "*";
   font-size: var(--font-size-38);
   color: var(--color-red);
-  
 }
 /*End of contact */
 /*footer*/
-  .footer{
-    padding: 1rem 0;
-    font-size: var(--font-size-15);
-    border-top: 0.1rem solid var(--color-input-border);
-  }
+.footer {
+  padding: 1rem 0;
+  font-size: var(--font-size-15);
+  border-top: 0.1rem solid var(--color-input-border);
+}
 /*End of footer*/
